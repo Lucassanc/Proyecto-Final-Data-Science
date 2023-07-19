@@ -51,13 +51,9 @@ print(df)
 
 #----------------------------------------------------------------------------------------------------------------#
 
-# Calcular la matriz de correlación
-corr_matrix = df.corr()
+ruta_imagen = 'E:\App Exes\VS Code\Proyecto Final Data\Introduccion.png'
 
-# Graficar la matriz de correlación
-plt.figure(figsize=(10, 10))
-sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
-plt.show()
+mostrar_imagen(ruta_imagen)
 
 #----------------------------------------------------------------------------------------------------------------#
 
@@ -210,7 +206,7 @@ stroke_work = df_stroke['work_type_Self-employed'].value_counts()
 labels_work = ['Empleador', 'Empleado']
 values_work = [stroke_work[1], stroke_work[0]]
 
-plt.subplot(1, 2, 2)
+
 plt.bar(labels_work, values_work)
 plt.xlabel('Tipo de Trabajo')
 plt.ylabel('Cantidad de pacientes')
@@ -242,6 +238,7 @@ for i, v in enumerate(values_smoking):
 plt.xlabel('Estado de Tabaquismo')
 plt.ylabel('Cantidad de casos de ACV')
 plt.title('Incidencia de ACV según Estado de Tabaquismo')
+plt.xticks(rotation=45)
 
 plt.show()
 
